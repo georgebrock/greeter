@@ -8,9 +8,9 @@ class Greeter
 
     def run
       if valid_arguments?
-        puts Greeter.greeting(name)
+        $stdout.puts Greeter.greeting(name)
       else
-        puts 'usage: greet name'
+        $stderr.puts 'usage: greet name'
       end
     end
 
