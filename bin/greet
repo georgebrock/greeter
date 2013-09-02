@@ -2,4 +2,8 @@
 
 require 'greeter/cli'
 
-Greeter::CLI.new(ARGV).run
+begin
+  Greeter::CLI.new(ARGV).run
+rescue => e
+  puts "greet: Error: #{e.message}"
+end
