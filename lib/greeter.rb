@@ -1,4 +1,8 @@
 class Greeter
+  class BadNameError < StandardError; end
+
+  VALID_NAME_REGEXP = /^\w+$/.freeze
+
   def self.greeting(name)
     new(name).greeting
   end
@@ -8,10 +12,18 @@ class Greeter
   end
 
   def greeting
-    "Hello #{name}"
+    if valid_name?
+      "Hello #{name}"
+    else
+      raise BadNameError, "#{name.inspect} is not a valid name"
+    end
   end
 
   private
 
   attr_reader :name
+
+  def valid_name?
+    name =~ VALID_NAME_REGEXP
+  end
 end
