@@ -12,4 +12,10 @@ describe 'The greet command' do
 
     expect(invocation.output).to eq "greet: Error: \"#####\" is not a valid name\n"
   end
+
+  it 'outputs a nice usage message when given no arguments' do
+    invocation = GreetRunner.run
+
+    expect(invocation.output).to eq "usage: greet name\n"
+  end
 end

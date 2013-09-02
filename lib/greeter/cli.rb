@@ -7,13 +7,21 @@ class Greeter
     end
 
     def run
-      puts Greeter.greeting(name)
+      if valid_arguments?
+        puts Greeter.greeting(name)
+      else
+        puts 'usage: greet name'
+      end
     end
 
     private
 
     def name
       @arguments.first
+    end
+
+    def valid_arguments?
+      @arguments.length == 1
     end
   end
 end

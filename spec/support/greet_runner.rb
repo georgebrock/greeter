@@ -4,7 +4,7 @@ require 'shellwords'
 class GreetRunner
   attr_reader :output, :error_output
 
-  def self.run(name)
+  def self.run(name=nil)
     new(name).tap(&:run)
   end
 
