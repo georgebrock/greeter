@@ -6,4 +6,5 @@ begin
   Greeter::CLI.new(ARGV).run
 rescue => e
   $stderr.puts "greet: Error: #{e.message}"
+  exit 1
 end

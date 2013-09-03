@@ -20,6 +20,10 @@ class GreetRunner
     exit_status.success?
   end
 
+  def exit_code
+    exit_status.exitstatus
+  end
+
   private
 
   attr_reader :name, :exit_status
