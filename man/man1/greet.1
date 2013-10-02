@@ -1,0 +1,24 @@
+.\" Writing groff? `man 7 groff` and `info groff` are your friends.
+.TH "GREET" "1" "2013-10-02" "greet 1.0" "Greet Manual"
+.\" ***** Formatting *****
+.nh \" disable hyphenation
+.ad l \" disable justifiction
+.\" ***** Content ****
+.SH "NAME"
+.sp
+.nf
+greet \- Say hello
+.SH "SYNOPSIS"
+\fIgreet\fR <name>
+.fi
+.sp
+.SH "DESCRIPTION"
+.sp
+Say hello to a user by name. \f1greet\fR will output the message "Hello <name>", inserting the name that was passed as the first command line argument.
+.sp
+The name may only consist of letters and numbers. Any other characters (punctuation, whitespace, etc.) will cause the command to fail.
+.sp
+.SH "AUTHOR"
+.sp
+Written by George Brocklehurst as a demonstration at the dotRB conference.
+.sp
