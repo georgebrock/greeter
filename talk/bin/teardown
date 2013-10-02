@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -rf live
+
+. ~/.bash_profile
+
+unset RUBYLIB

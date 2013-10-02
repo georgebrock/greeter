@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Set up the environment ready to give the talk
+
+mkdir -p live/bin
+cp -R lib live
+echo > live/lib/greeter/cli.rb
+cd live
+
+export PS1='$ '
+
+export RUBYLIB=./lib
+export PATH=./bin:$PATH
+
+alias figlet='figlet -f roman'
