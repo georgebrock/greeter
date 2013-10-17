@@ -1,7 +1,12 @@
-#!/bin/sh
+#!/bin/bash
+
+# Restore a normal environment after the talk
 
 rm -rf live
 
-. ~/.bash_profile
+source ~/.bash_profile
 
 unset RUBYLIB
+
+tmux source-file ~/.tmux.conf
+tmux set -g status on

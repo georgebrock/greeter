@@ -1,15 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
 # Set up the environment ready to give the talk
 
-mkdir -p live/bin
+source talk/bin/env.sh
+tmux source-file "$(pwd)/talk/tmux.conf"
+
+mkdir live
+mkdir -p live/man/man1
 cp -R lib live
-echo > live/lib/greeter/cli.rb
+cp -R talk/template/* live
 cd live
 
-export PS1='$ '
+unset NAME
 
-export RUBYLIB=./lib
-export PATH=./bin:$PATH
-
-alias figlet='figlet -f roman'
+clear
