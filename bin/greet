@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'greeter/cli'
+
+Greeter::CLI.new(ARGV).run
